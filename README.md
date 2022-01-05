@@ -16,7 +16,7 @@ bookclub
   two small programs to write during book club related to the topics.
 
 - First 15 minutes  will summarize the section.
-  next 35 minutes will be writing some go.
+  next 35 minutes will be writing some code.
   last 10 minutes we will talk through some solutions.
 
 - Each week, someone new will lead book club, 
