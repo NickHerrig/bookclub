@@ -4,11 +4,16 @@ This doc holds the reading schedule, related blogs/docs and summaries for each w
 ## Week One 01/12
 
 ### Readings
-- [] Download [Go Programming Language](https://go.dev/dl/)
-- [] Read Through [commentary](https://go.dev/doc/effective_go#commentary)
+- Read Through [commentary](https://go.dev/doc/effective_go#commentary)
+
+### Todos
+- Download [Go Programming Language](https://go.dev/dl/)
 
 ### Related Blogs/Docs
+- https://benhoyt.com/writings/go-intro/
+- [Tour of Go](https://go.dev/tour/welcome/1)
 
-### Summary
+### Summary/Discussion
 
-
+- Formatting
+- Commentary
