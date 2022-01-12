@@ -7,18 +7,22 @@ code snippets, ideas, and summaries from the ttdsm book clubs
 bookclub
 ├── README.md
 └── effective-go  -- directory with name of book/article/blog
-    └── README.md -- reading schedule
+    └── README.md -- reading schedule/basic summary
 ```
 
-
 ## House Keeping
-- For programming books, each week we will select 
-  two small programs to write during book club related to the topics.
-
-- First 15 minutes  will summarize the section.
-  next 35 minutes will be writing some code.
-  last 10 minutes we will talk through some solutions.
+- Book club takes place every two weeks.
 
 - Each week, someone new will lead book club, 
-  including leading the summary, selecting two problems, 
+  including writing the summary, selecting a problem,
   and leading discussion.
+
+- First 20 minutes or so we will discuss the readings
+  Next 30 minutes or so will be spent reviewing code
+  Last 10 minutes we will talk through the reading schedule 
+  and pick who is leading next.
+
+ - The leader has the first week to come up with and share the problem.
+   The rest of the group has the second week to complete the problem.
+
+ - Each person will work on the problem in their own branch of the repo
