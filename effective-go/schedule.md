@@ -21,10 +21,36 @@ Nick Herrig
 Andrew Dailey
 
 ### Readings
-- Read Through [Control Structures](https://go.dev/doc/effective_go#control-structures)
+- Read through [Control Structures](https://go.dev/doc/effective_go#control-structures)
 
 ### Problem 
-TBD
+Did you just fall into an Escher painting?
+Are you in Egypt?
+Things have definitely gotten sideways and pointy.
+There is clearly a pyramid off in the distance, but it appears to be flipped!
+Also, its size appears to vary based on how hard you squint (don't wanna get too much sand in your eyes).
 
-### Related Blogs/Docs
-- TBD
+Write a program that accepts a single integer argument (must be greater than zero).
+Based on this value, print out a sideways pyramid of asterisks that peaks at the provided size.
+
+Here are a few examples:
+```
+go run pyramids.go 1
+*
+
+go run pyramids.go 2
+*
+**
+*
+
+go run pyramids.go 5
+*
+**
+***
+****
+*****
+****
+***
+**
+*
+```
