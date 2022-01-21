@@ -6,8 +6,8 @@ code snippets, ideas, and summaries from the ttdsm book clubs
 ```shell
 bookclub
 ├── README.md
-└── effective-go  -- directory with name of book/article/blog
-    └── schedule.md -- reading schedule/basic summary
+└── effective-go     -- directory with name of book/article/blog
+    └── schedule.md  -- reading schedule/basic summary
 ```
 
 ## House Keeping
