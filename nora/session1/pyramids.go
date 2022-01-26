@@ -17,7 +17,7 @@ func main() {
 		for currentStar := 0; currentStar < i; currentStar++ {
 			fmt.Print("*")
 		}
-		fmt.Println("")	
+		fmt.Println("")
 	}
 
 	//Iterate down the pyramid
