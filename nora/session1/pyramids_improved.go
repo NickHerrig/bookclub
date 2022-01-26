@@ -10,6 +10,7 @@ func main() {
 	input, err := strconv.Atoi(os.Args[1])
 	if err != nil {
 		fmt.Println("Provided input was not an int!")
+		return;
 	}
 
 	//Iterate up the pyramid
