@@ -54,3 +54,13 @@ go run pyramids.go 5
 **
 *
 ```
+
+## Week Three 02/09
+### Leader
+Nora Mayse
+
+### Readings
+- Read [Functions](https://go.dev/doc/effective_go#functions) and [Data](https://go.dev/doc/effective_go#data)
+
+### Problem
+To be announced!
