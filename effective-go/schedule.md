@@ -63,4 +63,25 @@ Nora Mayse
 - Read [Functions](https://go.dev/doc/effective_go#functions) and [Data](https://go.dev/doc/effective_go#data)
 
 ### Problem
-To be announced!
+Modernizing the world of meeting spaces sure is hard work. 
+Our drone delivery tech can bring our eco friendly MeetHubs, made from international shipping crates, 
+anywhere in the continental United States! We're kind of the Uber of the shipped temporary meeting room world. 
+However, we have hit a snag. We currently guess the correct number of MeetHubs to drop off! 
+It would be much better if we used our clients meeting schedules to determine exactly how many MeetHubs 
+that they need for a given day.
+
+Given a csv in which the 0th column is start time (inclusive),  the 1th column is end time (exclusive), 
+and the 2th column is meeting name, please provide the number of meeting rooms required for the time period.
+
+*Example:*
+
+```csv
+9,12,mob session
+8,11,better team's mob session
+13,16,afternoon nap
+```
+
+```shell
+go run schedules.go data.csv
+2
+```
