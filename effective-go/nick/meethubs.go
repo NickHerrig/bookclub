@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 	"os"
+	"sort"
 
-	"github.com/ernestosuarez/itertools"
 	"github.com/gocarina/gocsv"
 )
 
@@ -19,18 +19,36 @@ type Meeting struct {
 	Name  string `csv:"meeting_name"`
 }
 
-func min(a, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
+// max returns the maximum of two integers
 func max(a, b int) int {
 	if a > b {
 		return a
 	}
 	return b
+}
+
+func findMeetingRooms(startTimes, endTimes []int) int {
+	if !sort.IntsAreSorted(startTimes) {
+		sort.Ints(startTimes)
+	}
+	if !sort.IntsAreSorted(endTimes) {
+		sort.Ints(endTimes)
+	}
+
+	minRooms, onGoing := 0, 0
+
+	for i, j := 0, 0; i < len(startTimes) && j < len(endTimes); {
+		if startTimes[i] < endTimes[j] {
+			onGoing++
+			minRooms = max(onGoing, minRooms)
+			i++
+		} else {
+			j++
+			onGoing--
+		}
+	}
+
+	return minRooms
 }
 
 func main() {
@@ -41,18 +59,13 @@ func main() {
 		os.Exit(1)
 	}
 
-	indexs := []int{}
-	for i := 0; i < len(meetings); i++ {
-		indexs = append(indexs, i)
+	// build a slice of start and end time slices
+	var startTimes, endTimes []int
+	for _, meeting := range meetings {
+		startTimes = append(startTimes, meeting.Start)
+		endTimes = append(endTimes, meeting.End)
 	}
 
-	combos := itertools.CombinationsInt(indexs, 2)
-	overlaps := 0
-	for v := range combos {
-		one, two := v[0], v[1]
-		overlap := min(meetings[one].End, meetings[two].End) - max(meetings[one].Start, meetings[two].Start) + 1
-		if overlap > 0 {
-			overlaps++
-		}
-	}
+	fmt.Println(findMeetingRooms(startTimes, endTimes))
+
 }
