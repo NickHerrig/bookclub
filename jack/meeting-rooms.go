@@ -55,13 +55,10 @@ func main() {
     }
     sort.Sort(sorted_times(times))
     fmt.Println(times)
-    //fmt.Println(start_times)
-    //fmt.Println(end_times)
-    ctr := 0
+    ctr := 1
     time_ctr := 1
     for i:=0; i<len(times)-1; i++ {
         if times[time_ctr].Start <= times[i].End && times[time_ctr].End > times[i].Start{
-            
             ctr = ctr+1
         }
         time_ctr = time_ctr+1
