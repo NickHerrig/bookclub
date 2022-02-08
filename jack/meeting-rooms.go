@@ -27,13 +27,16 @@ func main() {
         start_times = append(start_times, start_time)
         end_times = append(end_times, end_time)
     }
+
+    //fmt.Println(start_times)
+    //fmt.Println(end_times)
     ctr := 0
+    time_ctr := 1
     for i:=0; i<len(end_times)-1; i++ {
-      for j:=1; j<len(end_times); j++ {
-        if start_times[j] <= end_times[i] && end_times[j] > start_times[i]{
+        if start_times[time_ctr] <= end_times[i] && end_times[time_ctr] > start_times[i]{
             ctr = ctr+1
         }
-      }
+        time_ctr = time_ctr+1
     }
     fmt.Println(ctr)
 }
