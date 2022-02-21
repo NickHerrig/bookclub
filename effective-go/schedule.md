@@ -91,7 +91,7 @@ go run schedules.go data.csv
 Wesley Brueland
 
 ### Readings
-- Read [Initialization]https://go.dev/doc/effective_go#initialization) and [Methods](https://go.dev/doc/effective_go#methods)
+- Read [Initialization](https://go.dev/doc/effective_go#initialization) and [Methods](https://go.dev/doc/effective_go#methods)
 
 ### Problem
 Mr. Rubiks is in a pickle. He has a 3x3 grid that he uses to track his goals, but his dog (Fruruf) knocked it off the wall! But luckily Mr. Rubiks is a data hoarder, and keeps his goal progress recorded in his diary. 
