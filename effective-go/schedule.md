@@ -85,3 +85,58 @@ and the 2th column is meeting name, please provide the number of meeting rooms r
 go run schedules.go data.csv
 2
 ```
+
+## Week Four 02/23
+### Leader
+Wesley Brueland
+
+### Readings
+- Read [Initialization]https://go.dev/doc/effective_go#initialization) and [Methods](https://go.dev/doc/effective_go#methods)
+
+### Problem
+Mr. Rubiks is in a pickle. He has a 3x3 grid that he uses to track his goals, but his dog (Fruruf) knocked it off the wall! But luckily Mr. Rubiks is a data hoarder, and keeps his goal progress recorded in his diary. 
+
+Mr. Rubiks has 3 goals, and each time he successfully works on one, he adds a star to the column under that goal, and when he gets 3 stars under a goal he has mastered it! Being a critic though, when he fails to make progress on a goal in a day, he removes a star (up to empty under the goal). He's a busy man though, and days where he doesn't have time for working on himself, he doesn't penalize himself (no updates to the grid). 
+
+In addition to updating the chart, each night Mr. Rubiks updates his diary with the date, the goal to progress, and if he succeeded in making progress or not. 
+
+Given Mr. Rubiks diary, and his current three goals:
+
+1. Walk Fruruf right, left, right, right, left, then reverse around the block
+2. Sort his colored cubes according to color
+3. Clean up his puzzling station
+
+Help Mr. Rubiks reassemble his goal chart and report back the finished chart.
+
+TEST INPUT:
+```
+05-11-21, Walk Fruruf, 1
+05-13-21, Walk Fruruf, -1
+05-14-21, Clean Puzzles, -1
+05-14-21, Sort Cubes, 1
+05-15-21, Walk Fruruf, 1
+05-17-21, Walk Fruruf, 1
+05-17-21, Clean Puzzles, 1
+05-19-21, Sort Cubes, 1
+05-20-21, Clean Puzzles, 1
+05-21-21, Sort Cubes, 1
+```
+
+As an example:
+```
+05-11-21, Walk Fruruf, 1
+```
+ 
+causes the state:
+```
+walk, clean, sort
+[*]   []     []
+```
+
+and losing progress looks like:
+```
+05-12-21, Walk Fruruf, -1
+
+walk, clean, sort
+[]    []     []
+```
