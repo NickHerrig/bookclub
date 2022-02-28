@@ -140,3 +140,28 @@ and losing progress looks like:
 walk, clean, sort
 []    []     []
 ```
+
+## Week Four 03/9
+### Leader
+Jack Fordyce 
+
+### Readings
+- Read [Interfaces](https://go.dev/doc/effective_go#interfaces_and_types)
+
+### Problem
+Mr. S is a terrible sleeper.
+
+For years, Mr. S has struggled maintaining a healthy and regular sleep schedule. In a last ditch effort, he has started recording his “to bed” times and “wake up” times every day to try to get an idea of how much sleep he is getting and when he typically goes to bed and wakes up. Help Mr. S improve his sleep by calculating his average hours (round to nearest tenth) slept over n number of days. His entries look as follows:
+
+```
+To Bed, Wake Up
+9:30 PM, 6:15 AM
+9 PM, 4 AM
+12:15 AM, 6:20 AM
+4 PM, 3 AM
+```
+
+Example Output:
+```
+8.2 hours
+```
