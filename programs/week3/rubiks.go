@@ -98,7 +98,7 @@ func parse(data io.Reader) ([]Goal, error) {
 }
 
 func run() int {
-	data := flag.String("data", "goals.csv", "data file")
+	data := flag.String("data", "data.csv", "data file")
 	flag.Parse()
 
 	// open the CSV file
