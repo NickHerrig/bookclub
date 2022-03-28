@@ -223,7 +223,7 @@ Andrew Dailey
 - Read [Concurrency](https://go.dev/doc/effective_go#concurrency)
 
 ### Problem
-O Python, Where Art Thou? It is with constant sorrow that I often to write some Python construct in Go. Simply out of habit, I expect to be able to write clean `for i in range(10)` loops. Sadly, this ain't no big rock candy mountain. Best we can do an explicit for loop... right?
+O Python, Where Art Thou? It is with constant sorrow that I often attempt to write Python constructs in Go. Simply out of habit, I expect to be able to write clean `for i in range(5)` loops. Sadly, this ain't no big rock candy mountain. Best we can do is an explicit for loop... right?
 
 I want bring back the glory of Python's `range` builtin. This week, write a function called `xrange` (since `range` is a Go keyword) that accepts an integer N and returns a channel that produces sequential integers up to (but not including) N. Here is the signature:
 ```go
