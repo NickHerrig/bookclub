@@ -165,3 +165,94 @@ Example Output:
 ```
 8.2 hours
 ```
+
+## Week Six 03/23
+### Leader
+Nick Herrig
+
+### Readings
+- Read [The blank identifier](https://go.dev/doc/effective_go#blank) and [Embedding](https://go.dev/doc/effective_go#embedding)
+
+### Problem
+Slick Steve has an awesome idea for a web application!
+His first step, is to get a simple HTML page hosted on his server.
+Steve has a problem though, he works at a pretty locked down organization.
+This organization only gives him the ability to deploy a single binary!
+
+Good thing you know about embed!
+Help steve deploy a single binary that serves this basic HTML page.
+
+Bonus Points: for embedding types where possible for this problem.
+
+Example input:
+```html
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TTDSM - Book Club</title>
+  </head>
+
+  <body>
+    <main>
+    <h1>Hello from TTDSM</h1>
+    <button type="button">Do Not Press This!</button>
+    </main>
+  </body>
+
+</html>
+```
+
+Successful Problem:
+
+Visiting {localhost}:{port} returns the html file, logs the date, and IP address of visitor
+```
+go build prog.go
+./prog
+APP: 2022/03/12 192.168.0.36:54259 - New friend visited site.
+```
+
+## Week Seven 04/06
+### Leader
+Andrew Dailey
+
+### Readings
+- Read [Concurrency](https://go.dev/doc/effective_go#concurrency)
+
+### Problem
+O Python, Where Art Thou? It is with constant sorrow that I often to write some Python construct in Go. Simply out of habit, I expect to be able to write clean `for i in range(10)` loops. Sadly, this ain't no big rock candy mountain. Best we can do an explicit for loop... right?
+
+I want bring back the glory of Python's `range` builtin. This week, write a function called `xrange` (since `range` is a Go keyword) that accepts an integer N and returns a channel that produces sequential integers up to (but not including) N. Here is the signature:
+```go
+func xrange(n int) chan int {
+    // TODO: implement this (hint, it'll require a goroutine)
+    return nil
+}
+```
+
+Here is an example:
+```go
+package main
+
+import (
+	"fmt"
+)
+
+func main() {
+	for i := range xrange(5) {
+		fmt.Println(i)
+	}
+}
+```
+
+And the output:
+```
+0
+1
+2
+3
+4
+```
